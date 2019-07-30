@@ -1,0 +1,9 @@
+{
+  "name": "cadastro de alununos",
+  "short_name": "cda",
+  "theme_color": "#ff0000",
+  "background_color": "#66ffff",
+  "display": "browser",
+  "scope": "/home",
+  "start_url": "/http://127.0.0.1:5000/"
+}

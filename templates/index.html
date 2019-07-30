@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CICAD Tela Inicial</title>
+		<meta charset="UTF-8">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="static/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="static/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="static/js/bootstrap.min.js"></script>
+		<link rel="shortcut icon" type="image/x-incon" href="static/images/logo_faisp.jpg"/>
+		<style>
+			body{background-color: #FF3300 }
+		</style>
+	</head>
+	<body>
+		<div class="page-header">
+		<img src="static/images/logo.jpg" alt="some text" width=400 height=105>
+			<h1>CICAD Tela Inicial</h1>
+		</div>
+		<div class="btn-group">
+			<a href="{{ url_for('cadastrar') }}"><input type="button" class="btn btn-primary btn-lg" value="Cadastro de Alunos"></a>
+
+			<a href="{{ url_for('lista') }}"><input type="button" class="btn btn-primary btn-lg" value="Lista de Alunos"></a>	
+		</div>	
+	</body>
+</html>

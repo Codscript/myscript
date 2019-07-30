@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cadastrar ALUNO</title>
+		<meta charset="UTF-8">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="static/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="static/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="static/js/bootstrap.min.js"></script>
+		<link rel="shortcut icon" type="image/x-incon" href="static/images/logo_faisp.jpg"/>
+		<style>
+			body{background-color: #99FF99 }
+		</style>
+	<body>
+		<div class="page-header">
+		<img src="static/images/logo.jpg" alt="some text" width=400 height=105>
+			<h1>Cadastrar aluno</h1>
+		</div>
+		<div class="panel-body">
+			<form class="navbar-form navbar-left" action="{{ url_for('cadastro') }}" method="POST">
+				<table>
+						<tr>
+							<td>Nome:</td>
+							<td><input type="text" class="form-control" name="nome"placeholder="informe o seu nome aqui"></td>
+						</tr>
+						<tr>
+							<td>data de nacimento:</td>
+							<td><input type="text" class="form-control" name="data_de_nacimento" placeholder="informe a sua data de nacimento aqui"></td>
+						</tr>
+						<tr>
+							<td>idade:</td>
+							<td><input type="text" class="form-control" name="idade"placeholder="informe a sua idade aqui"></td>
+						</tr>
+						<tr>
+							<td>objetivo_da_graduacao:</td>
+							<td><input type="text" class="form-control" name="objetivo_da_graduacao" placeholder="Ex: gostaria de me formar para..."></td>
+						</tr>
+						<tr>
+							<td>genero:</td>
+							<td><select name="genero" >
+ 							<option>Selecione...</option>
+							<option value="masculino">masculino</option>
+							<option value="feminino">feminino</option>
+							<option value="masculino trans">masculino trans</option>
+							<option value="feminino trans">feminino trans</option></td>
+						</tr>
+						<tr>
+							<td>Email:</td>
+							<td><input type="text" class="form-control" name="email" placeholder="banana@banana"></td>
+						</tr>
+					</table><br>
+					<input type="submit" class="btn btn-primary btn-lg" value="Salvar Cadastro"/>
+					<a href="{{ url_for('home') }}" ><input type="button" class="btn btn-primary btn-lg" value="Voltar"></a>
+			</form>
+		</div>
+	</body>
+</html>

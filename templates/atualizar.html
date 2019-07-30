@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Atualizar ALUNO</title>
+		<meta charset="UTF-8">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="static/css/bootstrap.min.css">
+		
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="static/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="static/js/bootstrap.min.js"></script>
+		<link rel="shortcut icon" type="image/x-incon" href="static/images/logo_faisp.jpg"/>
+		<style>
+			body{background-color: #33CCFF}
+		</style>
+	</head>
+	<body>
+		<div class="page-header">
+			<h1>Atualizar Aluno</h1>
+		</div>
+		<div class="panel-body">
+			<form class="navbar-form navbar-left" method="POST" action="{{ url_for('atualiz') }}">
+				<table>
+					{% for aln in aln %}
+						<tr>
+							<td>Nome:</td>
+							<td><input type="text" class="form-control" name="nome" value="{{ aln.nome }}"></td>
+						</tr>
+						<tr>
+							<td>data de nacimento:</td>
+							<td><input type="text" class="form-control" name="data_de_nacimento" value="{{ aln.data_de_nacimento }}"></td>
+						</tr>
+						<tr>
+							<td>idade:</td>
+							<td><input type="text" class="form-control" name="idade" value="{{ aln.idade }}"></td>
+						</tr>
+						<tr>
+							<td>objetivo da graduacao:</td>
+							<td><input type="text" class="form-control" name="objetivo_da_graduacao" value="{{ aln.objetivo_da_graduacao }}"></td>
+						</tr>
+						<tr>
+							<td>genero:</td>
+							<td><input type="text" class="form-control" name="genero" value="{{ aln.genero }}"></td>
+						</tr>
+						<tr>
+							<td>E-mail:</td>
+							<td><input type="text" class="form-control" name="email" value="{{ aln.email }}"></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input type="hidden" class="form-control" name="id_aln" value="{{ aln.id_aln }}"></td>
+						</tr>
+						{% endfor %}
+					</table><br>
+				<input type="submit" class="btn btn-primary btn-lg" value="Atualizar">
+				<a href="{{ url_for('lista') }}"><input type="button" class="btn btn-primary btn-lg" value="Voltar"></a>
+			</form>
+		</div>
+	</body>
+</html>
